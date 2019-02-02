@@ -12,6 +12,7 @@ using System.IO.Ports;
 using System.Windows.Forms;
 using System.IO;
 using FormUtilities;
+using System.Drawing;
 
 namespace Exercise10
 {
@@ -37,6 +38,7 @@ namespace Exercise10
         #region voids and methods
         private void StartForm()
         {
+            Size = new Size(268, 249);
             serialPort = new SerialPort();
             comboBox = cmbAvailablePorts;
             SetPortName();
@@ -214,17 +216,7 @@ namespace Exercise10
                 txtBox.AppendText("Desconnectado...\n");
                 txtBox.AppendText(Environment.NewLine);
                 serialPort.Close();
-                chatTextoToolStripMenuItem.Enabled = false;
-                enviarFicheroToolStripMenuItem.Enabled = false;
-                recibirFicheroToolStripMenuItem.Enabled = false;
-                cmbAvailablePorts.Enabled = true;
-                cmbPar.Enabled = true;
-                cmbStop.Enabled = true;
-                txtBitCar.Enabled = true;
-                txtVelocity.Enabled = true;
-                portClosed = true;
-                btnContinue.Enabled = true;
-                btnClosePort.Enabled = false;
+                StartForm();
             }
             catch(Exception)
             {
@@ -248,6 +240,7 @@ namespace Exercise10
        
         private void enviarFicheroToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Size = new Size(477, 249);
             lblHeader.Text = "Modo Activo: Envío";
             if (portClosed == false)
             {
@@ -296,6 +289,7 @@ namespace Exercise10
 
         private void recibirFicheroToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Size = new Size(477, 249);
             serialPort.DataReceived -= new SerialDataReceivedEventHandler(port_DataReceived);
 
             lblHeader.Text = "Modo Activo: Recepción";
@@ -340,6 +334,7 @@ namespace Exercise10
 
         private void chatTextoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Size = new Size(477, 249);
             lblHeader.Text = "Modo Activo: Chat";
             txtSend.Enabled = true;
             btnSend.Enabled = true;

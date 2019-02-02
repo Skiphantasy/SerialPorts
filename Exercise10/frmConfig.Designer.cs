@@ -197,7 +197,7 @@ namespace Exercise10
             this.ayudaToolStripMenuItem});
             this.mnuMenu.Location = new System.Drawing.Point(0, 0);
             this.mnuMenu.Name = "mnuMenu";
-            this.mnuMenu.Size = new System.Drawing.Size(457, 24);
+            this.mnuMenu.Size = new System.Drawing.Size(248, 24);
             this.mnuMenu.TabIndex = 14;
             // 
             // archivoToolStripMenuItem
@@ -211,7 +211,7 @@ namespace Exercise10
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -228,21 +228,21 @@ namespace Exercise10
             // enviarFicheroToolStripMenuItem
             // 
             this.enviarFicheroToolStripMenuItem.Name = "enviarFicheroToolStripMenuItem";
-            this.enviarFicheroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.enviarFicheroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.enviarFicheroToolStripMenuItem.Text = "Enviar Fichero";
             this.enviarFicheroToolStripMenuItem.Click += new System.EventHandler(this.enviarFicheroToolStripMenuItem_Click);
             // 
             // recibirFicheroToolStripMenuItem
             // 
             this.recibirFicheroToolStripMenuItem.Name = "recibirFicheroToolStripMenuItem";
-            this.recibirFicheroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.recibirFicheroToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.recibirFicheroToolStripMenuItem.Text = "Recibir Fichero";
             this.recibirFicheroToolStripMenuItem.Click += new System.EventHandler(this.recibirFicheroToolStripMenuItem_Click);
             // 
             // chatTextoToolStripMenuItem
             // 
             this.chatTextoToolStripMenuItem.Name = "chatTextoToolStripMenuItem";
-            this.chatTextoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.chatTextoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.chatTextoToolStripMenuItem.Text = "Chat Texto";
             this.chatTextoToolStripMenuItem.Click += new System.EventHandler(this.chatTextoToolStripMenuItem_Click);
             // 
@@ -257,7 +257,7 @@ namespace Exercise10
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.acercaDeToolStripMenuItem.Text = "Acerca de...";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
@@ -312,7 +312,7 @@ namespace Exercise10
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(457, 206);
+            this.ClientSize = new System.Drawing.Size(248, 206);
             this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtSend);
