@@ -1,9 +1,9 @@
 ﻿/*
- * EXERCISE............: Exercise 9.
+ * EXERCISE............: Exercise 10.
  * NAME AND LASTNAME...: Tania López Martín 
  * CURSE AND GROUP.....: 2º Interface Development 
- * PROJECT.............: Forms III. Text Editor 
- * DATE................: 24 Jan 2019
+ * PROJECT.............: Forms III. Serial Port and DLL
+ * DATE................: 30 Jan 2019
  */
 
 

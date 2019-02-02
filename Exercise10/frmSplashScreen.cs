@@ -9,7 +9,6 @@
 
 using System;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace Exercise10

@@ -11,29 +11,30 @@ using System;
 using System.IO.Ports;
 using System.Windows.Forms;
 using System.IO;
-using Microsoft.Win32;
 using FormUtilities;
 
 namespace Exercise10
 {
     public partial class frmConfig : Form
     {
+        #region attributes
         public static SerialPort serialPort;
         private string name;
         private int velocity;
         private int databit;
         private int filesNo;
-        bool portClosed;
-
+        private bool portClosed;
         static ComboBox comboBox;
+        #endregion
+        #region constructor
         public frmConfig()
         {
             InitializeComponent();
             Options.CreateRegKey(@"SOFTWARE\P10", "Uses");
-            StartForm();
-            
+            StartForm();           
         }
-
+        #endregion
+        #region voids and methods
         private void StartForm()
         {
             serialPort = new SerialPort();
@@ -59,6 +60,7 @@ namespace Exercise10
             txtBitCar.Text = serialPort.DataBits.ToString();
             serialPort.DataReceived -= new SerialDataReceivedEventHandler(port_DataReceived);
         }
+
         public static void SetPortName()
         {
             foreach (string s in SerialPort.GetPortNames())
@@ -68,8 +70,6 @@ namespace Exercise10
             }
         }
 
-
-        // Display PortParity values and prompt user to enter a value.
         public void SetPortParity()
         {
 
@@ -79,7 +79,6 @@ namespace Exercise10
             }            
         }
 
-        // Display StopBits values and prompt user to enter a value.
         public void SetPortStopBits()
         {
             foreach (string s in Enum.GetNames(typeof(StopBits)))
@@ -87,7 +86,8 @@ namespace Exercise10
                 cmbStop.Items.Add(s);
             }
         }
-
+        #endregion
+        #region events
         private void cmbAvailablePorts_SelectedIndexChanged(object sender, EventArgs e)
         {
             Console.WriteLine(name);
@@ -377,5 +377,6 @@ namespace Exercise10
                 this.WindowState = FormWindowState.Minimized;
             }
         }
+        #endregion
     }
 }
