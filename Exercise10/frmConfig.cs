@@ -31,6 +31,9 @@ namespace Exercise10
         public frmConfig()
         {
             InitializeComponent();
+            SetPortStopBits();
+            SetPortParity();
+            SetPortName();
             Options.CreateRegKey(@"SOFTWARE\P10", "Uses");
             StartForm();           
         }
@@ -40,13 +43,10 @@ namespace Exercise10
         {
             Size = new Size(268, 249);
             serialPort = new SerialPort();
-            comboBox = cmbAvailablePorts;
-            SetPortName();
+            comboBox = cmbAvailablePorts;           
             filesNo = 0;
             btnContinue.Enabled = true;
             portClosed = true;
-            SetPortStopBits();
-            SetPortParity();
             lblHeader.Text = "Modo Activo: ";
             chatTextoToolStripMenuItem.Enabled = false;
             enviarFicheroToolStripMenuItem.Enabled = false;
@@ -55,6 +55,11 @@ namespace Exercise10
             txtBox.ReadOnly = true;
             btnSend.Enabled = false;
             btnClosePort.Enabled = false;
+            cmbAvailablePorts.Enabled = true;
+            cmbPar.Enabled = true;
+            cmbStop.Enabled = true;
+            txtBitCar.Enabled = true;
+            txtVelocity.Enabled = true;
             cmbAvailablePorts.Text = serialPort.PortName;
             cmbPar.Text = serialPort.Parity.ToString();
             cmbStop.Text = serialPort.StopBits.ToString();
@@ -63,11 +68,11 @@ namespace Exercise10
             serialPort.DataReceived -= new SerialDataReceivedEventHandler(port_DataReceived);
         }
 
-        public static void SetPortName()
+        public void SetPortName()
         {
             foreach (string s in SerialPort.GetPortNames())
             {
-                comboBox.Items.Add(s);
+                cmbAvailablePorts.Items.Add(s);
                 Console.WriteLine(s);
             }
         }
